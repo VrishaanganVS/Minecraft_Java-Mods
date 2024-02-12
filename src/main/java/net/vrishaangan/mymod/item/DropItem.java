@@ -19,7 +19,8 @@ public class DropItem {
     create an instance of the item. Here, it creates a new Item instance with default properties
      */
 
-
+    public static final RegistryObject<Item> RAW_SAPPHIRE = ITEM.register("raw_sapphire",
+            () -> new Item(new Item.Properties()));
     public static void register(IEventBus eventBus)
     {
         ITEM.register(eventBus);

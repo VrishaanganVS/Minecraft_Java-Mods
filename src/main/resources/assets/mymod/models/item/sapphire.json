@@ -1,10 +1,9 @@
 {
-  "parent":"item/generator",
+  "parent": "item/generated",
   "//comment": "The parent determines how the item is displayed when you hold it in the hand, the item/generated the (generated) is basically what it does is it stretches a 2D image into a 3D image",
+  "//comment1": "The layer0 is basically in mymod folder it looks for the item folder inside that it looks for the sapphire png/jpeg whichever",
+
   "textures": {
-    "layer0": "mymod:item/sapphire",
-    "//comment": "The layer0 is basically in mymod folder it looks for the item folder inside that it looks for the sapphire png/jpeg whichever"
-
-
-  }
+    "layer0": "mymod:item/sapphire"
+    }
 }

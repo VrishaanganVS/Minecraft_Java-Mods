@@ -1,4 +1,6 @@
 {
   "item.mymod.sapphire": "Sapphire",
+  "item.mymod.raw_sapphire": "Raw_Sapphire",
+  "creativetab.mod_tab": "Sapphire Tutorial Tab",
   "//comment": "This is the values and the //comment is the key in this json file "
 }

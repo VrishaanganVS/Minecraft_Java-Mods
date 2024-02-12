@@ -15,6 +15,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.vrishaangan.mymod.item.CreativeModTabs;
 import net.vrishaangan.mymod.item.DropItem;
 import org.slf4j.Logger;
 
@@ -30,6 +31,8 @@ public class MyMod
     public MyMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        CreativeModTabs.register(modEventBus);/* this also need to be registered here as well*/
 
         DropItem.register(modEventBus); // this ensures that our deferredregister is
         // properly registered and our items are actually added to the game
@@ -52,11 +55,14 @@ public class MyMod
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(DropItem.SAPPHIRE);
+            event.accept(DropItem.RAW_SAPPHIRE);
             /* This is to add the sapphire into the game in the creative menu but
             it still dosent have a assigned name and texture.
             */
         }
     }
+
+
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
